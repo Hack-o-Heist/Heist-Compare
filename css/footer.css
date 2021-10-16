@@ -1,0 +1,26 @@
+.logo {
+    font-family: 'Playball', cursive;
+    font-size: xx-large;
+}
+.logo:hover{
+    text-shadow: 0 0 10px #fffffd 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bitter', serif;
+}
+
+.zoom:hover {
+    transform: scale(1.06);
+}
+
+.icon{
+    font-size: 30px;
+}
+
+li{
+    cursor: pointer;
+}
