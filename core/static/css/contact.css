@@ -8,20 +8,16 @@
     margin-top: 100px;
     text-transform: uppercase;
 }
-.contact-title1 h1{
+ .h1{
     font-size: 40px;
 
 }
-.contact-title1 h1{
+ .h2{
     font-size: 16px;
 }
 .form-control1{
     width: 600px;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid grey;
-    background-color:lightgreen;
-    font-size: 10px;
+    font-size: 25px;
     margin-bottom: 16px;
 }
  .submit1{
