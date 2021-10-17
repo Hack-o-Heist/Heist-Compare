@@ -21,7 +21,7 @@ def amazon_products(keywords):
 
         for item in all_items:
             try:
-                link = "https://www.amazon.in" + item.find("a", attrs={'class': 'a-link-normal'})['src']
+                link = "https://www.amazon.in" + item.find("a", attrs={'class': 'a-link-normal'})['href']
                 img = item.find("img", attrs={'class': 's-image'})['src']
                 title = item.find("span", attrs={'class': 'a-size-medium a-color-base a-text-normal'}).text
                 rating = item.find("span", attrs={'class': 'a-icon-alt'}).text.split(" ")[0]

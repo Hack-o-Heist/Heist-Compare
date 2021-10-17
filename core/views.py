@@ -19,9 +19,11 @@ def search(request, keywords):
     amazon_product = amazon_products(keywords)
     if amazon_product['type'] == 'success':
         products = products + amazon_product['products']
+    print("amazon", len(products))
     flipkart_product = flipkart_products(keywords)
     if flipkart_product['type'] == 'success':
         products = products + flipkart_product['products']
+    print("flipkart", len(products))
 
     products = {i:k for i, k in enumerate(products)}
     return render(request, 'core/home.html', {'products': products})
