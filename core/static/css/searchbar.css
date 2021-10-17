@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap');
+
 :root {
 	font-size: calc(16px + (24 - 16)*(100vw - 320px)/(1920 - 320));
 }
@@ -6,7 +8,7 @@
 	line-height: 1.5em;
 }
  input {
-	color: #171717;
+	color: #000000;
 }
  .search-bar {
 	display: flex;
@@ -45,7 +47,7 @@
 .search-bar input {
 	background: transparent;
 	border-radius: 1.5em;
-	box-shadow: 0 0 0 0.4em #171717 inset;
+	box-shadow: 0 0 0 0.4em #d8d0d0 inset;
 	padding: 0.75em;
 	transform: translate(0.5em,0.5em) scale(0.5);
 	transform-origin: 100% 0;
@@ -64,7 +66,7 @@
 	transform: scale(1);
 }
 .search-btn {
-	background: #171717;
+	background: #b1adad;
 	border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
 	padding: 0.75em;
 	position: relative;
@@ -133,7 +135,7 @@
 	}
 	.search-bar input:focus,
 	.search-bar input:valid {
-		background: #3d3d3d;
+		background: #ffffff;
 		box-shadow: 0 0 0 0.1em #3d3d3d inset;
 	}
 	.search-btn {
@@ -149,8 +151,10 @@
     cursor:crosshair;
 }
 .searchprod{
-    font-size: 50px;
-    color:white;
+    font-size: 30px;
+	padding-top: 15px;
+    color:rgb(255, 255, 255);
     text-align: center;
-    text-decoration: underline;
+	border-bottom: dashed;
+	font-family: 'Bitter', serif;
 }
