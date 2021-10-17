@@ -20,11 +20,10 @@ form{
 }
 .form-control{
     width: 600px;
-    background:transparent;
     border: none;
     outline: none;
     border-bottom: 1px solid grey;
-    color:#fff;
+    color:lightgreen;
     font-size: 10px;
     margin-bottom: 16px;
 }
