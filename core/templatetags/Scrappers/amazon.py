@@ -23,7 +23,11 @@ def amazon_products(keywords):
             try:
                 link = "https://www.amazon.in" + item.find("a", attrs={'class': 'a-link-normal'})['href']
                 img = item.find("img", attrs={'class': 's-image'})['src']
-                title = item.find("span", attrs={'class': 'a-size-medium a-color-base a-text-normal'}).text
+                try:
+                    title = item.find("span", attrs={'class': 'a-size-medium a-color-base a-text-normal'}).text
+                except:
+                    title = item.find("span", attrs={'class': 'a-size-base-plus a-color-base a-text-normal'}).text
+
                 rating = item.find("span", attrs={'class': 'a-icon-alt'}).text.split(" ")[0]
                 price = item.find("span", attrs={'class': 'a-offscreen'})
 

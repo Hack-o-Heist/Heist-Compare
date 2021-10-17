@@ -33,4 +33,5 @@ def search(request, keywords):
     products = sorted(products, key=lambda p: int(str(p['price']).replace(',', '').replace("₹", '')))
 
     # products = {i:k for i, k in enumerate(products)}
-    return render(request, 'core/home.html', {'products': products})
+    keywords.capitalize()
+    return render(request, 'core/search.html', {'products': products, 'keyword': keywords})
