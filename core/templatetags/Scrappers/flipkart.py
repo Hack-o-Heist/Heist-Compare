@@ -37,6 +37,9 @@ def flipkart_products(keywords):
                 if price:
                     price = price.text
                 
+                if not price:
+                    continue
+
                 product = {
                     'link': link,
                     'img': img,
