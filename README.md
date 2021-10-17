@@ -5,6 +5,7 @@ It's a web application that enables the user to make the best choice out of avai
 
 # Live Demo: https://heistcompare.herokuapp.com/
 Video Link: https://youtu.be/j_f_xnI-MW0
+
 PPT Link: https://docs.google.com/presentation/d/1eJgMh5S8rBcgFVRlSMA3XrKxOtRqIuR1/edit?usp=drivesdk&ouid=103235436871868236841&rtpof=true&sd=true
 
 # Welcome to the disruptive site to empower the user to make an informed choice to buy the exact product at the best price.
