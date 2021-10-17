@@ -87,8 +87,7 @@ li a{
 /* company img  */
 .ecomsites{
     background: rgb(205,40,173);
-    background: linear-gradient(90deg, rgba(205,40,173,1) 0%, rgba(238,6,205,1) 35%, rgba(0,212,255,1) 100%);
-    border: 10px solid linear-gradient(90deg, rgba(205,40,173,1) 0%, rgba(238,6,205,1) 35%, rgb(7, 4, 20) 100%);
+    border: 10px solid purple;
     margin-top: 50px;
     margin-left: 20px;
     margin-right: 20px;
