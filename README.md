@@ -1,5 +1,4 @@
 # Heist-Compare
-It's a web application that enables the user to make the best choice out of available choices from various e-commerce platforms.
 
 It's a web application that enables the user to make the best choice out of available choices from various e-commerce platforms and choose the best product at the least price. They no more need to check all different websites and compare the prices, they get all the comparisons done on the same platform with all details regarding similar products and can also get youtube reviews.
 
