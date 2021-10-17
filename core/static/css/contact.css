@@ -1,16 +1,17 @@
-.contact{
+.contact1{
     text-align:center;
+    border: 3px solid black;
 }
-.contact-title{
+.contact-title1{
     margin-top: 100px;
     text-transform: uppercase;
     transition: all 4s ease-in-out;
 }
-.contact-title h1{
+.contact-title1 h1{
     font-size: 40px;
-    line-height: 10px;
+
 }
-.contact-title h1{
+.contact-title1 h1{
     font-size: 16px;
 }
 
