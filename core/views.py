@@ -6,6 +6,7 @@ from .templatetags.Scrappers.flipkart import flipkart_products
 from .templatetags.Scrappers.flipkart_product import flipkart_product_details
 from django.core.cache import cache
 import json
+from django.views.decorators.csrf import csrf_exempt
 
 
 # Create your views here.
@@ -43,6 +44,7 @@ def search(request, keywords):
     return render(request, 'core/search.html', {'products': products, 'keyword': keywords})
 
 
+@csrf_exempt
 def get_product_details(request):
     if request.method == 'GET':
         return HttpResponseRedirect('/')
