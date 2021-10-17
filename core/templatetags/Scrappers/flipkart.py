@@ -50,13 +50,11 @@ def flipkart_products(keywords):
                 
                 products.append(product)
             except Exception as e:
-                # print(item)
                 print(e)
         
         return {'type': 'success', 'products': products}
 
     except Exception as e:
-        print(item)
         return {'type': 'error', 'error': e}
 
 

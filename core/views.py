@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .templatetags.Scrappers.amazon import amazon_products
 from .templatetags.Scrappers.flipkart import flipkart_products
-import random
+from django.core.cache import cache
 
 
 # Create your views here.
@@ -18,20 +18,23 @@ def video(request):
 def about(request):
     return render(request, 'core/about.html')
 
+
+
 def search(request, keywords):
-    products = []
-    amazon_product = amazon_products(keywords)
-    if amazon_product['type'] == 'success':
-        products = products + amazon_product['products']
+    products = cache.get('search_'+keywords, [])
 
-    flipkart_product = flipkart_products(keywords)
-    if flipkart_product['type'] == 'success':
-        products = products + flipkart_product['products']
-    
+    if len(products) == 0:
+        amazon_product = amazon_products(keywords)
+        if amazon_product['type'] == 'success':
+            products = products + amazon_product['products']
 
-    # random.shuffle(products)
-    products = sorted(products, key=lambda p: float(str(p['price']).replace(',', '').replace("₹", '')))
+        flipkart_product = flipkart_products(keywords)
+        if flipkart_product['type'] == 'success':
+            products = products + flipkart_product['products']
+        
+        products = sorted(products, key=lambda p: float(str(p['price']).replace(',', '').replace("₹", '')))
+        cache.set('search_'+keywords, products)
 
-    # products = {i:k for i, k in enumerate(products)}
+
     keywords.capitalize()
     return render(request, 'core/search.html', {'products': products, 'keyword': keywords})
