@@ -82,3 +82,33 @@ li a{
     width: 600px;
     height: 400px;
 }
+
+
+/* company img  */
+.ecomsites{
+    border: 3px solid purple;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 50px;
+    border-radius: 20px;
+
+}
+.ecomhead2{
+    font: size 50px;
+    font-weight: bold;
+    text-align: center;
+}
+.ecomimg{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.ecom1{
+    width: 240px;
+    height: 200px;
+    border:2px solid black;
+    margin: 40px;
+    padding:10px;
+    border-radius: 60px;
+}
