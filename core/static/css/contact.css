@@ -19,7 +19,8 @@
     font-size: 16px;
 }
 .form-control1{
-    width: 660px;
+    width: 680px;
+    border-radius: 25px;
     font-size: 20px;
     margin-bottom: 16px;
 }
