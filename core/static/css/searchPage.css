@@ -178,8 +178,6 @@ h2 {
     height: 80%;
 }
 
-/* pragati's css */
-
 body{
     background-color:  #EEEEEE;
 }
@@ -263,8 +261,8 @@ body{
   }
 
   .card-img-top{
-      object-fit: cover;
-      height: 15vw;
+      object-fit: contain;
+      height: 20vw;
   }
 
 .type{
