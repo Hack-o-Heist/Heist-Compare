@@ -30,7 +30,7 @@ def search(request, keywords):
     
 
     # random.shuffle(products)
-    products = sorted(products, key=lambda p: str(p['price']).replace(',', ''))
+    products = sorted(products, key=lambda p: int(str(p['price']).replace(',', '').replace("₹", '')))
 
     # products = {i:k for i, k in enumerate(products)}
     return render(request, 'core/home.html', {'products': products})
