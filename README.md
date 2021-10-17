@@ -7,9 +7,3 @@ So you may curious to know how our site gonna work.So here we go......
 
 We know how tedious and time taking it is to search for your desired product and to get best possible choice. We understood this problem and come with an innovative solution Hiest Compare it's an web application through which you'll just search for the product let's say Apple Macbook M1 air it'll show you same product from different sites(like Amazon,Flipkart etc).Now user have a ball in it's area to make informed decison with best value.On top of that we also provide Hot product link and buying guide to embrace good buying decision.
 
-Our Team
-Anuj Rajaram Jadhav
-Vikas Kumar Gond
-Pulkit Kumar Agarwal
-Shivam Kumar
-
