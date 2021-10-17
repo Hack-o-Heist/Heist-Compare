@@ -5,7 +5,6 @@
 .contact-title1{
     margin-top: 100px;
     text-transform: uppercase;
-    transition: all 4s ease-in-out;
 }
 .contact-title1 h1{
     font-size: 40px;
@@ -17,7 +16,6 @@
 
 form{
     margin-top: 50px;
-    transition: all 4s ease-in-out;
 }
 .form-control{
     width: 600px;
@@ -32,8 +30,7 @@ form{
      height:45px;
  }
  form .submit{
-     background:#ff5722;
-     border-color: transparent;
+     background:lightgreen;
      color: #fff;
      font-size: 20px;
      font-weight: bold;
