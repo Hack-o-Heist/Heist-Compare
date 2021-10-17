@@ -10,6 +10,17 @@
 
 {% block body %}
 <div class="container">
+{% for message in messages %}
+<div class="container-fluid p-0">
+  <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ message }}
+  </div>
+</div>
+{% endfor %}
+
   <div class="contact">
     <div class="contact-title">
       <p style="font-size: 50px;text-decoration: underline;">Contact Us</p>

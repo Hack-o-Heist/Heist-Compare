@@ -24,8 +24,9 @@ def contact(request):
         subject = 'Contact us form submitted on Heist Compare'
         mail_message = f'Name: {name}\n\nEmail: {email}\n\nMessage: {message}'
 
-        email = EmailMessage(subject, mail_message, email, to=['hackoheist2021@gmail.com'])
+        email = EmailMessage(subject, mail_message, email, to=['hackoheist2021@gmail.com', email])
         email.send()
+        messages.success(request, "Thanks, Your message has been sent.")
     return render(request, 'core/contact.html')
 
 
