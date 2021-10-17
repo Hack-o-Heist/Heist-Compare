@@ -24,7 +24,7 @@ form{
     border: none;
     outline: none;
     border-bottom: 1px solid grey;
-    color:lightgreen;
+    background-color:lightgreen;
     font-size: 10px;
     margin-bottom: 16px;
 }
