@@ -1,7 +1,11 @@
-from django.shortcuts import render
+from django.http.response import Http404
+from django.shortcuts import render, HttpResponseRedirect, HttpResponse
 from .templatetags.Scrappers.amazon import amazon_products
+from .templatetags.Scrappers.amazon_product import amazon_product_details
 from .templatetags.Scrappers.flipkart import flipkart_products
+from .templatetags.Scrappers.flipkart_product import flipkart_product_details
 from django.core.cache import cache
+import json
 
 
 # Create your views here.
@@ -19,7 +23,6 @@ def about(request):
     return render(request, 'core/about.html')
 
 
-
 def search(request, keywords):
     products = cache.get('search_'+keywords, [])
 
@@ -33,8 +36,25 @@ def search(request, keywords):
             products = products + flipkart_product['products']
         
         products = sorted(products, key=lambda p: float(str(p['price']).replace(',', '').replace("₹", '')))
-        cache.set('search_'+keywords, products)
+        cache.set('search_'+keywords, products, timeout=None)
 
 
     keywords.capitalize()
     return render(request, 'core/search.html', {'products': products, 'keyword': keywords})
+
+
+def get_product_details(request):
+    if request.method == 'GET':
+        return HttpResponseRedirect('/')
+    
+    page_link = request.POST.get('link', '')
+
+    if 'amazon.in' in page_link:
+        page_details = amazon_product_details(page_link)
+        return HttpResponse(json.dumps(page_details['response']), content_type="application/json")
+    
+    if 'flipkart.com' in page_link:
+        page_details = flipkart_product_details(page_link)
+        return HttpResponse(json.dumps(page_details['response']), content_type="application/json")
+
+    return Http404()
