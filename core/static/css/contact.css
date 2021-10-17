@@ -13,11 +13,7 @@
 .contact-title1 h1{
     font-size: 16px;
 }
-
-form{
-    margin-top: 50px;
-}
-.form-control{
+.form-control1{
     width: 600px;
     border: none;
     outline: none;
@@ -26,10 +22,7 @@ form{
     font-size: 10px;
     margin-bottom: 16px;
 }
- input{
-     height:45px;
- }
- form .submit{
+ .submit1{
      background:lightgreen;
      color: #fff;
      font-size: 20px;
