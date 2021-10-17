@@ -3,27 +3,28 @@
 {% load static %}
 
 {% block head %}
-    <title>Heist Compare | Contact</title>
-  {% endblock head %}
+<title>Heist Compare | Contact</title>
+{% endblock head %}
 
 
 
 {% block body %}
 <div class="container">
-    <div class="contact">
+  <div class="contact">
     <div class="contact-title">
-        <p style="font-size: 50px;text-decoration: underline;">Contact Us</p>
-        <h1>Feel Free to Contact Us</h1>
-        <h2>We are always ready to serve you </h2>
+      <p style="font-size: 50px;text-decoration: underline;">Contact Us</p>
+      <h1>Feel Free to Contact Us</h1>
+      <h2>We are always ready to serve you </h2>
     </div>
     <div class="contact-form">
-        <form id="contact-form" method="post" action="https://formsubmit.co/hackoheist2021@gmail.com">
+      <form method="post" action="">
+      {% csrf_token %}
         <input name="name" type="text" class="form-control" placeholder="Your Name" required> <br>
         <input name="email" type="email" class="form-control" placeholder="Your Email" required><br>
         <textarea name="message" id="" cols="60" rows="10" placeholder="Message" required></textarea> <br>
-          <input type="submit" class="form-control submit" value="SEND MESSAGE">
-        </form>
-        </div>
+        <input type="submit" class="form-control submit" value="SEND MESSAGE">
+      </form>
     </div>
-    </div>
+  </div>
+</div>
 {% endblock body %}

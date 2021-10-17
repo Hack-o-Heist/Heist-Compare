@@ -7,6 +7,8 @@ from .templatetags.Scrappers.flipkart_product import flipkart_product_details
 from django.core.cache import cache
 import json
 from django.views.decorators.csrf import csrf_exempt
+from django.core.mail import EmailMessage
+from django.contrib import messages
 
 
 # Create your views here.
@@ -14,6 +16,16 @@ def index(request):
     return render(request, 'core/home.html')
 
 def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        message = request.POST.get('message', '')
+
+        subject = 'Contact us form submitted on Heist Compare'
+        mail_message = f'Name: {name}\n\nEmail: {email}\n\nMessage: {message}'
+
+        email = EmailMessage(subject, mail_message, email, to=['hackoheist2021@gmail.com'])
+        email.send()
     return render(request, 'core/contact.html')
 
 
