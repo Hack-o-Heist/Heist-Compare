@@ -1,0 +1,26 @@
+.abthead1{
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+    font-weight: bolder;
+    text-shadow: 10px;
+}
+.abthead2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: solid black 10px;
+}
+.abthead3{
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 10px;
+}
+.aboutcont{
+    border: 5px solid purple;
+    background-image: linear-gradient(purple, rgb(69, 126, 218)
+    );
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+}
