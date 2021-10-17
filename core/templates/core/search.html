@@ -137,21 +137,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="video.html">Video Review</a>
+                        <a class="nav-link" href="/video">Video Review</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="loginPage.html">Login</a>
+                        <a class="nav-link" href="/contact">Contact Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                    <li class="nav-item dropdown">
+                    {% comment %} <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Services
@@ -164,7 +161,7 @@
                             </li>
                             <li><a class="dropdown-item" href="#">Search Product</a></li>
                         </ul>
-                    </li>
+                    </li> {% endcomment %}
                 </ul>
             </div>
         </div>

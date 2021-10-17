@@ -30,7 +30,7 @@ def search(request, keywords):
     
 
     # random.shuffle(products)
-    products = sorted(products, key=lambda p: int(str(p['price']).replace(',', '').replace("₹", '')))
+    products = sorted(products, key=lambda p: float(str(p['price']).replace(',', '').replace("₹", '')))
 
     # products = {i:k for i, k in enumerate(products)}
     keywords.capitalize()
