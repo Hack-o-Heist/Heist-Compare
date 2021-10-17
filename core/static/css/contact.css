@@ -1,9 +1,11 @@
 .contact1{
     margin-top: 20px;
+    margin-bottom: 20px;
     text-align:center;
-    border: 3px solid black;
+    border: 3px solid green;
     border-radius:20px;
     padding: 20px;
+    background-color: #bbff99;
 }
 .contact-title1{
     margin-top: 100px;
