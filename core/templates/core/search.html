@@ -219,13 +219,14 @@
                         <div class="card-body">
                             <h5 class="card-title shop-item-title">{{product.title|truncatechars:50}}</h5>
                             <p class="card-text">
-                                Rating: {{product.rating}} <br>
+                                Rating: {{product.rating}} of 5.0<br>
                             </p>
-                            <div class="row">
+                            {% comment %} <div class="row">
                                 <div class="col-lg-12 col-md-12 pb-2 pt-1">
-                                    <a href="">Click here for YT review</a>
+                                    <a href="https://www.youtube.com/results?search_query={{product.title}}">Click here for YT review</a>
                                 </div>
-                            </div>
+                            </div> {% endcomment %}
+                            {% if "amazon.in" in product.link %}
                             <div class="row">
                                 <div class="col-lg-6 col-md-12">
                                     Amazon Price:
@@ -234,6 +235,8 @@
                                     {{product.price}}
                                 </div>
                             </div>
+                            {% endif %}
+                            {% if "flipkart.com" in product.link %}
                             <div class="row">
                                 <div class="col-lg-6 col-md-12">
                                     Flipkart Price:
@@ -242,6 +245,7 @@
                                     {{product.price}}
                                 </div>
                             </div>
+                            {% endif %}
                             <div class="row shop-items-details mt-3">
                                 <div class="col-6">
                                     <a href="{{product.link}}">
